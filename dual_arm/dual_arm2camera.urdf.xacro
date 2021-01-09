@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="xyzrobot_plus">
+
+    <!-- include -->
+  <xacro:include filename="$(find dual_arm)/urdf/dual_arm.urdf.xacro"/>
+  <xacro:include filename="$(find realsense2_description)/urdf/_d435i.urdf.xacro" />
+
+<!-- build dual_arm -->
+  <xacro:dual_arm xyz="0 0 0" rpy="0 0 0" >
+  </xacro:dual_arm>
+
+<!-- build eye-in-hand camera -->
+    <!-- <xacro:sensor_d435i parent="panda_hand" name="camera_EE" use_nominal_extrinsics="false" >
+    <origin rpy="${pi} ${-pi/2} 0" xyz="0.1 0.0 0.04"/>
+  </xacro:sensor_d435i> -->
+
+<!-- build eye-to-hand camera -->
+  <xacro:sensor_d435i parent="stick" name="camera_fix" use_nominal_extrinsics="false" >
+    <origin rpy="0 0 -1.5708" xyz="0.0 -0.02 0.3"/>
+  </xacro:sensor_d435i>
+
+
+</robot>
