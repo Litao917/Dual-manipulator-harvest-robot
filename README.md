@@ -1,4 +1,5 @@
 # Dual-manipulator-harvest-robot
+# 双臂协同采摘机器人
 
 本机器人模型及配置文件详细说明可参见：《矮化密植果园多臂采摘机器人任务规划》
 该文已投稿至农业工程学报Transactions of the Chinese Society of Agricultural Engineering
